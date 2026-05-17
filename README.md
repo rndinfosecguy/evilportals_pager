@@ -30,6 +30,23 @@ I recommend to take care that the `credentials.json` file exists and has open pe
 
 Now you should be able to use Evil Portal as described in the payloads repository by Hak5
 
+## Portals
+
+### Made by Kleo
+
+- Cliqq
+- Google
+- Yahoo
+- Twitter
+- Facebook
+- Instagram
+- O2
+- Starbucks
+
+### Added in this Repo
+
+- X
+
 ## License
 
 Evil Portals is distributed under the GNU GENERAL PUBLIC LICENSE v3. See [LICENSE](https://github.com/kleo/evilportals/blob/master/LICENSE) for more information.
