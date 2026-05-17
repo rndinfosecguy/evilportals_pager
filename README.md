@@ -2,9 +2,9 @@
 
  This is a fork of [Evil Portals](https://github.com/kleo/evilportals). I created this fork to make these portal workable with the [Evil Portal](https://github.com/hak5/wifipineapplepager-payloads/tree/master/library/user/evil_portal) version for the Wifi Pineapple Pager.
 
-Also I added a portal for X, as Twitter is legacy. However, I left the original version inside in case you want to use it.
-
  This means I changed the location of the collected credentials to the location `/root/logs/credentials.json` as described in the documentation of the [Evil Portal](https://github.com/hak5/wifipineapplepager-payloads/tree/master/library/user/evil_portal) module
+
+Also I added a portal for X, as Twitter is legacy. However, I left the original version inside in case you want to use it.
 
 This project requires you to install the [Evil Portal](https://github.com/hak5/wifipineapplepager-payloads/tree/master/library/user/evil_portal) captive portal module for the Pineapple Pager.
 
@@ -28,7 +28,7 @@ I recommend to take care that the `credentials.json` file exists and has open pe
 
     touch /root/logs/credentials.json; chmod 777 /root/logs/credentials.json
 
-How you should be abple to use Evil Portal as described on the repository by Hak5
+Now you should be able to use Evil Portal as described in the payloads repository by Hak5
 
 ## License
 
