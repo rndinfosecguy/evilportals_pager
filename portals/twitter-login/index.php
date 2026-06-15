@@ -1,6 +1,9 @@
 <?php
 $destination = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 require_once('helper.php');
+
+data = getClientMac($_SERVER['REMOTE_ADDR']).",".getClientHostName($_SERVER['REMOTE_ADDR']);
+file_put_contents("/root/logs/hostnames.csv", $data);
 ?>
 
   <html>
